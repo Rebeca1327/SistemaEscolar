@@ -35,8 +35,6 @@ class Pessoa
         Console.WriteLine($"Olá, meu nome é {Nome} e tenho {Idade} anos.");
     }
 
-    /*
-    // FASES ANTERIORES
 
     public bool EhMaiorDeIdade()
     {
@@ -57,7 +55,6 @@ class Pessoa
         else
             return "Adulto";
     }
-    */
 }
 
 class Aluno : Pessoa
@@ -128,6 +125,9 @@ class Program
     {
         /*
 
+
+
+
         class Pessoa
         {
             public string Nome;
@@ -151,7 +151,8 @@ class Program
         p2.Apresentar();
 
 
-        //
+
+
         string nome;
         string curso;
         double nota1;
@@ -182,7 +183,6 @@ class Program
         Console.WriteLine($"Aprovado: {aprovado}");
 
 
-        //
 
         int anoAtual = 2026;
 
@@ -201,16 +201,7 @@ class Program
             $"Olá, {nome}! Você nasceu por volta de {anoNascimento}.");
         Console.WriteLine($"Sua nota final foi {nota}.");
 
-
-        //
-
-        p1.Idade = -50;
-        p1.Apresentar();
-
-        Console.WriteLine(p1.EhMaiorDeIdade());
-        Console.WriteLine(p1.AnoDeNascimento(2026));
-        Console.WriteLine(p1.FaixaEtaria());
-
+        =================================================
         */
 
         Pessoa p = new Pessoa();
@@ -225,6 +216,26 @@ class Program
         p2.Apresentar();
         Console.WriteLine();
 
+
+        p.Idade = -50;
+        p.Apresentar();
+        Console.WriteLine();
+
+
+        Console.WriteLine($"Carlos é maior de idade? {p.EhMaiorDeIdade()}");
+        Console.WriteLine($"Beatriz é maior de idade? {p2.EhMaiorDeIdade()}");
+        Console.WriteLine();
+
+        Console.WriteLine($"Ano de nascimento de Carlos: {p.AnoDeNascimento(2026)}");
+        Console.WriteLine($"Ano de nascimento de Beatriz: {p2.AnoDeNascimento(2026)}");
+        Console.WriteLine();
+
+        Console.WriteLine($"Carlos: {p.FaixaEtaria()}");
+        Console.WriteLine($"Beatriz: {p2.FaixaEtaria()}");
+        Console.WriteLine();
+
+
+
         Aluno a1 = new Aluno();
         a1.Nome = "Marina";
         a1.Idade = 17;
@@ -234,6 +245,8 @@ class Program
         a1.Apresentar();
         Console.WriteLine($"Situação: {a1.Situacao()}");
         Console.WriteLine();
+
+
 
         Professor prof = new Professor();
         prof.Nome = "Roberto";
@@ -248,6 +261,7 @@ class Program
         monitor.Idade = 20;
         monitor.Disciplina = "C#";
         monitor.HorasSemanais = 10;
+
 
         monitor.HorasSemanais = 25;
 
@@ -276,8 +290,8 @@ class Program
 
         novo.Apresentar();
         Console.WriteLine($"Situação final: {novo.Situacao()}");
-
         Console.WriteLine();
+
         Console.WriteLine("=== CARTÃO DE MATRÍCULA ===");
 
         Console.Write("Digite seu nome: ");
